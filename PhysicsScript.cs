@@ -5,8 +5,8 @@ using UnityEngine;
 public class PhysicsScript : MonoBehaviour
 {
     public WheelCollider[] wheels;
-    public float motorpower = 150;
-    public float steering = 10;
+    public float motorpower = 150f;
+    public float steering = 10f;
 
     public GameObject centerofMass;
     public Rigidbody rigidbody;
