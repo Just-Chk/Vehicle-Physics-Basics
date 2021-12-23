@@ -12,6 +12,15 @@ public class PhysicsScript : MonoBehaviour
     public Rigidbody rigidbody;
 
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        rigidbody = GetComponent<Rigidbody>();
+        rigidbody.centerofMass.transform.localPosition;
+        
+    }
+    
+    
     void FixedUpdate()
     {
         for (int i = 0; i < wheels.Length; i++)
@@ -26,14 +35,5 @@ public class PhysicsScript : MonoBehaviour
         {
             wheel.motorTorque = Input.GetAxis("Vertical") * motorpower;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-        rigidbody.centerofMass.transform.localPosition;
-        
-    }
-    
+    }    
 }
